@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Filmes e Séries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Imagem no topo -->
+        <div class="top-banner">
+            <img src="imagecd.png" alt="Banner de Filmes e Séries">
+        </div>
+        
+        <h1>Cadastro de Filmes e Séries</h1>
+        <form action="cadastra.php" method="post">
+            <div class="form-group">
+                <label for="tipo">Tipo:</label>
+                <div>
+                    <label><input type="radio" name="tipo" value="Filme" required> Filme</label>
+                    <label><input type="radio" name="tipo" value="Série" required> Série</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="capitulo">Capítulo/Episódio:</label>
+                <input type="number" id="capitulo" name="capitulo" min="1">
+            </div>
+            <div class="form-group">
+                <label for="categoria">Categoria:</label>
+                <div>
+                    <label><input type="checkbox" name="categoria[]" value="Suspense"> Suspense</label>
+                    <label><input type="checkbox" name="categoria[]" value="Ação"> Ação</label>
+                    <label><input type="checkbox" name="categoria[]" value="Aventura"> Aventura</label>
+                    <label><input type="checkbox" name="categoria[]" value="Ficção Científica"> Ficção Científica</label>
+                    <label><input type="checkbox" name="categoria[]" value="Romance"> Romance</label>
+                    <label><input type="checkbox" name="categoria[]" value="Policial"> Policial</label>
+                    <label><input type="checkbox" name="categoria[]" value="Terror"> Terror</label>
+                    <label><input type="checkbox" name="categoria[]" value="Dorama"> Dorama</label>
+                    <label><input type="checkbox" name="categoria[]" value="Animes"> Animes</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="sinopse">Sinopse:</label>
+                <textarea id="sinopse" name="sinopse" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Salvar</button>
+            </div>
+        </form>
+        <a href="visualiza.php">Visualizar Cadastros</a>
+    </div>
+</body>
+</html>
